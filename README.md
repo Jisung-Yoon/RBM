@@ -9,3 +9,14 @@ Deep Belief Network can construct by stacking RBMs.<br/>
 - downlad.py: Files for downlading MNIST data sets
 - ops.py: Operation functions
 - utils.py: Functions dealing with images processing.
+
+## Usage
+First, download dataset with:
+
+    $ python download.py mnist
+
+Second, write the main function with configuration you want.
+
+## Results
+
+![result](assets/result.png)
