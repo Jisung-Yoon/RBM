@@ -5,7 +5,7 @@ Models RBM
 from __future__ import print_function
 import numpy as np
 
-
+from ops import *
 from util import *
 
 
@@ -17,7 +17,7 @@ class RBM:
         Args:
             input_size: length of input vector (In MNIST case, input_size is 784)
             hidden_size: length of hidden vector
-            input_is_binary: (optional) if you want to use inout node as binary, set True
+            input_is_binary: (optional) if you want to use input node as binary, set True
             hidden_is_binary: (optional) if you want to use hidden node as continuous value, set False
             algorithm_type: (optional) In this code, contrastive divergence(CD) and persistent CD(PCD)
                                         is implemented. If learning sample is large, CD does not work well.
@@ -27,6 +27,7 @@ class RBM:
         self.result_path = os.path.join('./result', name)
         check_and_make_dir()
         check_and_make_dir(self.result_path)
+        self.epochs = 0
 
         self.input_size = input_size
         self.hidden_size = hidden_size
@@ -94,10 +95,11 @@ class RBM:
         if self.algorithm_type == 'PCD':
             self.v_model = self.backward_propagation(h_model)
 
+        self.epochs += 1
         return error
 
     # Generating visible using gibbs sampling (starts from random hidden vectors)
-    def generate_images(self, number_of_images=100, n_step=200, hidden=None):
+    def generate_visible(self, number_of_images=100, n_step=200, hidden=None):
         if hidden is None:
             hidden = np.round(np.random.rand(number_of_images, self.hidden_size))
 
