@@ -1,7 +1,7 @@
 # RBM
-Numpy implementation of Restriced Boltzman Machine
-This model generates MNIST images using RBM.
-Deep Belief Network can construct by stacking RBMs.
+Numpy implementation of Restriced Boltzman Machine. <br/>
+This model generates MNIST images using RBM.<br/>
+Deep Belief Network can construct by stacking RBMs.<br/>
 
 ## File discription
 - main.py: Main function of implemenation, construct the model, generates images, and calculate entropy of hidden unit
