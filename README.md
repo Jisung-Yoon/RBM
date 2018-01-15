@@ -1,6 +1,6 @@
 # RBM
 Numpy implementation of Restriced Boltzman Machine. <br/>
-This model generates MNIST images using RBM. Constrative Divergence(CD) and persistent CD is implemeted.<br/>
+This model generates MNIST images using RBM. Constrative Divergence(CD) and persistent CD(PCD) is implemeted.<br/>
 Deep Belief Network can construct by stacking RBMs.<br/>
 
 ## File discription
