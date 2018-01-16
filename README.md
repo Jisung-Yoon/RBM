@@ -1,7 +1,7 @@
 # RBM
-Numpy implementation of Restriced Boltzman Machine. <br/>
+Numpy implementation of [Restriced Boltzman Machine](https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine). <br/>
 This model generates MNIST images using RBM. Constrative Divergence(CD) and persistent CD(PCD) is implemeted.<br/>
-Deep Belief Network can construct by stacking RBMs.<br/>
+Deep Belief Network can construct simply by stacking RBM. In DBN case, input dimension of later RBM layer should be equal to hidden  dimension of forrmer RBM layer.<br/>
 
 ## File discription
 - main.py: Main function of implemenation, construct the model, generates images, and calculate entropy of hidden unit
